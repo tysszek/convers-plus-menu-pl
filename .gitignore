@@ -1,0 +1,9 @@
+*.vbf
+*.bin
+*.hex
+*.srec
+*.elf
+*.dump
+*.raw
+__pycache__/
+.pytest_cache/
