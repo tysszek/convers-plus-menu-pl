@@ -1,9 +1,20 @@
 # Polskie menu Advanced dla moda M0RTAR/Motral
 
-Mały, bezpieczny patch językowy dla popularnego moda Ford Convers+ 1412-FL.
-Tłumaczy istniejące dodatkowe menu Advanced, które w bazowym modzie pozostaje
-po angielsku. Nie dodaje nowej funkcji i nie zmienia sposobu obliczania ani
-wyświetlania wartości.
+To repozytorium opisuje dwa odrębne warianty zmian napisów w Ford Convers+ 1412-FL.
+Nie należy ich łączyć na podstawie samej nazwy pliku — każdy wariant ma własną
+strukturę wejściową i własny, kontrolowany zestaw skryptów.
+
+## Wariant 1 — pełny patch V5.2 → V5.3.4
+
+To jest pełny łańcuch naszego softu: `Płyta CD`, `Multimedia USB/BT`, nagłówki
+konfiguracji, `Tempomat`, wszystkie aktywne motywy oraz poprawka komunikatu
+telefonu `Dokladnie` → `przychodzi`. Kompletna procedura odtworzenia znajduje
+się w [pełnej instrukcji V5.2–V5.3.4](docs/odtworzenie-pelnego-patcha-v5-3-4.md).
+
+## Wariant 2 — M0RTAR/Motral, dodatkowe menu Advanced
+
+Mały, bezpieczny patch językowy dla dodatkowego menu Advanced. Nie dodaje nowej
+funkcji i nie zmienia sposobu obliczania ani wyświetlania wartości.
 
 ## Rozpoznawane warianty
 
@@ -117,7 +128,7 @@ Projekt nie zawiera żadnego firmware. Licencje i autorstwo opisano w
 `CREDITS.md`, `NOTICE.md` oraz `LICENSE_UPSTREAM_MIT`.
 ## Pełny wykaz widocznych zmian menu — V5.3.4
 
-To repozytorium zawiera kompletny opis zmian napisów, które zostały wykonane w widocznych menu i komunikatach naszego Convers+ 1412-FL. Poniższa lista obejmuje cały łańcuch zmian V5.2 → V5.3.4, a nie tylko dwa ostatnie napisy motywów.
+To repozytorium zawiera kompletny opis zmian napisów, które zostały wykonane w widocznych menu i komunikatach naszego Convers+ 1412-FL. Poniższa lista obejmuje cały łańcuch zmian V5.2 → V5.3.4, a nie tylko dwa ostatnie napisy motywów. Procedura technicznego odtworzenia jest opisana w [pełnej instrukcji V5.2–V5.3.4](docs/odtworzenie-pelnego-patcha-v5-3-4.md).
 
 ### Menu główne
 
@@ -140,7 +151,7 @@ To repozytorium zawiera kompletny opis zmian napisów, które zostały wykonane 
 
 ### Wewnętrzne menu „Advanced”
 
-W istniejącym dodatkowym menu przetłumaczone zostały również widoczne pozycje:
+Wariant M0RTAR/Motral dodatkowego menu Advanced ma również poniższe widoczne pozycje. Odtwarza je osobny patcher `patch_vbf_menu_pl.py`; nie są one dodatkowym krokiem pełnego łańcucha V5.2 → V5.3.4 bez ponownej analizy zgodności:
 
 | Oryginał | Nazwa po polsku |
 |---|---|
