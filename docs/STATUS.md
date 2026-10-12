@@ -1,16 +1,25 @@
 # Status projektu
 
-Wersja publiczna jest przygotowana jako patch językowy dla struktury menu
-M0RTAR 1412-FL. Patcher przechodzi testy strukturalne i waliduje VBF przed oraz
-po modyfikacji.
+Repozytorium zawiera dwa jasno rozdzielone warianty patcha dla Convers+ 1412-FL.
 
-Zakres obejmuje menu bazowe oraz menu rozszerzone o `Gauge sweep` lub kolejną
-pozycję. Znane etykiety są tłumaczone, a nowe pozycje pozostają niezmienione i
-pojawiają się w raporcie jako nieprzetłumaczone. Patch nie dodaje testu
-wskazówek ani patcha Bluetooth — te funkcje są utrzymywane osobno. Bluetooth
-nie zmienia struktury menu Advanced.
+## Pełny wariant menu V5.2 → V5.3.4
 
-Jeżeli narzędzie odmówi pracy, nie należy omijać kontroli struktury VBF/menu.
-Opcjonalna kontrola SHA-256 jest dostępna przez `--strict-hash`. Do zgłoszenia
-problemu wystarczy komunikat z narzędzia i suma pliku; nie należy publikować
-firmware ani zrzutu EEPROM.
+To jest aktualna ścieżka naszego softu. Obejmuje:
+
+- zmiany menu głównego `Zmieniacz płyt CD` → `Płyta CD` oraz `wejście Auxiliary` → `Multimedia USB/BT`;
+- nagłówki `Forward Alert` → `Ostrz. kolizji`, `Driver Alert` → `Czujność`, `Colour themes` → `Kolory`, `Advanced` → `Zaawansowane`;
+- `Cruise Control` → `Tempomat`, także w bezpośrednich nagłówkach widocznych po wejściu do podmenu;
+- sześć aktywnych motywów: `Ciemny`, `Niebieski`, `Szary`, `Czerwony`, `Zielony`, `Nocne niebo`;
+- komunikat telefonu `Dokladnie` → `przychodzi`, z technicznym skróceniem sąsiedniego `Akcept.` → `Akcept` dla zachowania rozmiaru ED.
+
+Pełna kolejność skryptów i oczekiwane sumy są w [procedurze V5.2–V5.3.4](odtworzenie-pelnego-patcha-v5-3-4.md).
+
+V5.3.4 jest zweryfikowany strukturalnie i checksumami VBF. Skrypty sprawdzają wersję wejściową, adres, długość i oczekiwane dane przed zapisem. Fizyczne wgranie należy potwierdzić na konkretnym egzemplarzu licznika po zachowaniu kopii recovery.
+
+## Wariant M0RTAR/Motral
+
+Osobny patch `patch_vbf_menu_pl.py` tłumaczy dodatkowe, relokowane menu Advanced, w tym jego wewnętrzne pozycje. Obsługuje rozpoznane warianty cztero- i pięciopozycyjne, nie dodaje funkcji i nie zmienia logiki pomiarów. Ten wariant nie jest automatycznie kolejnym krokiem pełnego łańcucha V5.2 → V5.3.4.
+
+## Poza zakresem
+
+Nie dodano komunikatu `Niski poziom płynu chłodniczego` ani `Ostrzeżenie DPF`. To osobne zmiany funkcjonalne wymagające potwierdzenia i obsługi zdarzeń CAN/PCM. Nie należy omijać kontroli struktury VBF ani publikować firmware i EEPROM.
