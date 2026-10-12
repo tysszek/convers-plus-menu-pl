@@ -12,18 +12,55 @@ CS7T-14C026-CD.vbf
 
 Nie zmieniano `ED`, `AA`, obsługi CAN ani logiki komunikatów. Komunikat o niskim poziomie płynu chłodniczego pozostaje poza zakresem tej wersji.
 
-## Końcowe nazwy sześciu widocznych motywów
+## Pełny wykaz widocznych zmian w całym łańcuchu V5.2 → V5.3.4
 
-| Oryginał | Polski |
+V5.3.4 jest ostatnim etapem tej gałęzi. Zawiera dwa nowe tłumaczenia motywów, a wcześniejsze etapy zachowują pozostałe zmiany widoczne na liczniku.
+
+### Menu główne
+
+| Oryginał | Nazwa na liczniku |
 |---|---|
-| Ciemny | Ciemny |
-| Niebieski | Niebieski |
-| Szary | Szary |
-| Czerwony | Czerwony |
-| Green | Zielony |
-| Lunar Sky | Nocne niebo |
+| `Zmieniacz płyt CD` | `Płyta CD` |
+| `wejście Auxiliary` | `Multimedia USB/BT` |
 
-Poprzednie poprawki menu V5.3.3 pozostają zachowane, w tym napisy menu głównego, nagłówki `Ostrz. kolizji` i `Czujność`, `Kolory`, `Zaawansowane`, `Tempomat` oraz poprawka `Dokladnie` → `przychodzi` w ED.
+### Menu konfiguracji
+
+| Oryginał | Nazwa na liczniku |
+|---|---|
+| `Forward Alert` | `Ostrz. kolizji` |
+| `Driver Alert` | `Czujność` |
+| `Colour themes` | `Kolory` |
+| `Advanced` | `Zaawansowane` |
+| `Cruise Control` | `Tempomat` |
+
+### Wewnętrzne menu „Advanced”
+
+| Oryginał | Nazwa na liczniku |
+|---|---|
+| `Digital speed` | `Predkosc cyfrowa` |
+| `Gauge sweep` | `Test wskazowek` |
+| `Engine temp & Voltage` | `Temp. silnika i napiecie` |
+| `on main` | `Na ekranie glownym` |
+| `in standby` | `W trybie czuwania` |
+
+### Wszystkie aktywne motywy
+
+| Oryginał | Nazwa na liczniku |
+|---|---|
+| `Dark` | `Ciemny` |
+| `Blue` | `Niebieski` |
+| `Grey` | `Szary` |
+| `Red` | `Czerwony` |
+| `Green` | `Zielony` |
+| `Lunar Sky` | `Nocne niebo` |
+
+### Komunikat telefonu
+
+`Dokladnie` zmieniono na `przychodzi`. Aby zachować długość zasobu ED, sąsiedni `Akcept.` skrócono do `Akcept`.
+
+`Forward Alert` jest pozycją ostrzegania przed kolizją/ruchem; w analizowanej gałęzi nie ma osobnego aktywnego napisu `Traffic`.
+
+Poza V5.3.4 pozostają funkcje wymagające dodatkowej logiki, w szczególności komunikat o niskim poziomie płynu chłodniczego i `Ostrzeżenie DPF`.
 
 ## Ochrona struktury rekordów
 
