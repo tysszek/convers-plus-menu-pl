@@ -75,6 +75,8 @@ Wskaźniki rekordów i flagi pozostały niezmienione. Dzięki temu wybór motywu
 
 ## Odtworzenie patcha
 
+Pełną procedurę odtworzenia całego łańcucha V5.2 → V5.3.4, włącznie z wcześniejszymi zmianami menu głównego, nagłówkami i komunikatem ED, opisuje [osobny dokument proceduralny](odtworzenie-pelnego-patcha-v5-3-4.md). Poniższy etap dotyczy wyłącznie przejścia V5.3.3 → V5.3.4.
+
 Skrypt jest przypięty do dokładnej bazy V5.3.3 i odmówi pracy na innym pliku:
 
 ```bash
