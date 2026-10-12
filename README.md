@@ -115,3 +115,42 @@ python -m unittest discover -s tests -v
 
 Projekt nie zawiera żadnego firmware. Licencje i autorstwo opisano w
 `CREDITS.md`, `NOTICE.md` oraz `LICENSE_UPSTREAM_MIT`.
+
+
+## Pełny patch widocznego menu — V5.3.4
+
+To repozytorium zawiera również kompletną dokumentację i skrypty zmian widocznych napisów menu użytych w naszym firmware Convers+ 1412-FL. Istniejący patch językowy menu Advanced M0RTAR/Motral pozostaje zachowany bez zmian.
+
+Zmiany widoczne na liczniku:
+
+| Oryginał | Nazwa po polsku |
+|---|---|
+| Zmieniacz płyt CD | Płyta CD |
+| wejście Auxiliary | Multimedia USB/BT |
+| Forward Alert | Ostrz. kolizji |
+| Driver Alert | Czujność |
+| Colour themes | Kolory |
+| Advanced | Zaawansowane |
+| Cruise Control | Tempomat |
+| Dokladnie | przychodzi |
+| Green | Zielony |
+| Lunar Sky | Nocne niebo |
+
+Motywy `Green` i `Lunar Sky` zostały potwierdzone jako widoczne na fizycznym liczniku, dlatego są częścią V5.3.4. Zmiany dotyczą wyłącznie napisów używanych przez menu i komunikaty wyświetlane na liczniku; nieużywane kopie tabel systemowych pozostają nietknięte.
+
+Dokumentacja kolejnych wersji:
+
+- [V5.3.4 — aktualny stan sześciu motywów](docs/menu-label-patch-v5-3-4.md)
+- [V5.3.3 — wcześniejszy audyt](docs/menu-label-patch-v5-3-3.md)
+- [V5.3 — menu główne, nagłówki i ED](docs/menu-label-patch-v5-3-v1.md)
+- [V5.2 — wcześniejsze nazwy menu głównego](docs/menu-label-patch-v5-2-v1.md)
+
+Skrypty odtworzeniowe tej gałęzi:
+
+- `tools/apply_menu_labels_v53.py`
+- `tools/build_menu_labels_v531_physical_fix.py`
+- `tools/apply_theme_labels_v533.py`
+- `tools/apply_theme_labels_v534.py`
+- `tools/apply_ed_phone_fix_v53.py`
+
+Pliki VBF i paczki firmware nie są publikowane w repozytorium. Pracuj wyłącznie na własnych, zweryfikowanych plikach i zachowaj kopię recovery.
