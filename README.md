@@ -115,42 +115,71 @@ python -m unittest discover -s tests -v
 
 Projekt nie zawiera żadnego firmware. Licencje i autorstwo opisano w
 `CREDITS.md`, `NOTICE.md` oraz `LICENSE_UPSTREAM_MIT`.
+## Pełny wykaz widocznych zmian menu — V5.3.4
 
+To repozytorium zawiera kompletny opis zmian napisów, które zostały wykonane w widocznych menu i komunikatach naszego Convers+ 1412-FL. Poniższa lista obejmuje cały łańcuch zmian V5.2 → V5.3.4, a nie tylko dwa ostatnie napisy motywów.
 
-## Pełny patch widocznego menu — V5.3.4
-
-To repozytorium zawiera również kompletną dokumentację i skrypty zmian widocznych napisów menu użytych w naszym firmware Convers+ 1412-FL. Istniejący patch językowy menu Advanced M0RTAR/Motral pozostaje zachowany bez zmian.
-
-Zmiany widoczne na liczniku:
+### Menu główne
 
 | Oryginał | Nazwa po polsku |
 |---|---|
-| Zmieniacz płyt CD | Płyta CD |
-| wejście Auxiliary | Multimedia USB/BT |
-| Forward Alert | Ostrz. kolizji |
-| Driver Alert | Czujność |
-| Colour themes | Kolory |
-| Advanced | Zaawansowane |
-| Cruise Control | Tempomat |
-| Dokladnie | przychodzi |
-| Green | Zielony |
-| Lunar Sky | Nocne niebo |
+| `Zmieniacz płyt CD` | `Płyta CD` |
+| `wejście Auxiliary` | `Multimedia USB/BT` |
 
-Motywy `Green` i `Lunar Sky` zostały potwierdzone jako widoczne na fizycznym liczniku, dlatego są częścią V5.3.4. Zmiany dotyczą wyłącznie napisów używanych przez menu i komunikaty wyświetlane na liczniku; nieużywane kopie tabel systemowych pozostają nietknięte.
+### Menu konfiguracji
 
-Dokumentacja kolejnych wersji:
+| Oryginał | Nazwa po polsku |
+|---|---|
+| `Forward Alert` | `Ostrz. kolizji` |
+| `Driver Alert` | `Czujność` |
+| `Colour themes` | `Kolory` |
+| `Advanced` | `Zaawansowane` |
+| `Cruise Control` | `Tempomat` |
 
-- [V5.3.4 — aktualny stan sześciu motywów](docs/menu-label-patch-v5-3-4.md)
+`Forward Alert` to pozycja związana z ostrzeganiem przed kolizją/ruchem. W tej gałęzi firmware nie ma osobnego, niezależnego napisu `Traffic` — został on rozpoznany w rozmowie jako opis tej funkcji.
+
+### Wewnętrzne menu „Advanced”
+
+W istniejącym dodatkowym menu przetłumaczone zostały również widoczne pozycje:
+
+| Oryginał | Nazwa po polsku |
+|---|---|
+| `Digital speed` | `Predkosc cyfrowa` |
+| `Gauge sweep` | `Test wskazowek` |
+| `Engine temp & Voltage` | `Temp. silnika i napiecie` |
+| `on main` | `Na ekranie glownym` |
+| `in standby` | `W trybie czuwania` |
+
+W tych zasobach zachowano zapis bez polskich znaków tam, gdzie wymaga tego potwierdzona mapa glifów firmware.
+
+### Menu motywów „Kolory”
+
+| Oryginał | Nazwa po polsku |
+|---|---|
+| `Dark` | `Ciemny` |
+| `Blue` | `Niebieski` |
+| `Grey` | `Szary` |
+| `Red` | `Czerwony` |
+| `Green` | `Zielony` |
+| `Lunar Sky` | `Nocne niebo` |
+
+`Green` i `Lunar Sky` są aktywnymi pozycjami widocznymi na fizycznym liczniku i zostały dodane do finalnego zakresu V5.3.4.
+
+### Komunikat telefonu
+
+| Oryginał | Nazwa po polsku |
+|---|---|
+| `Dokladnie` | `przychodzi` |
+
+Aby zachować rozmiar zasobu ED, sąsiedni przycisk został technicznie skrócony z `Akcept.` do `Akcept`. Nie zmienia to jego funkcji.
+
+### Zakres techniczny
+
+Zmiany dotyczą wyłącznie tekstów używanych przez widoczne menu i komunikaty. Nie tłumaczyliśmy ukrytych kopii innych języków ani nieużywanych wpisów tabel systemowych. Nie dodano w tej wersji komunikatu o niskim poziomie płynu chłodniczego ani funkcji `Ostrzeżenie DPF` — są to osobne prace funkcjonalne V9.
+
+Dokumentacja wersji i skrypty odtworzeniowe znajdują się w:
+
+- [V5.3.4 — aktualny stan](docs/menu-label-patch-v5-3-4.md)
 - [V5.3.3 — wcześniejszy audyt](docs/menu-label-patch-v5-3-3.md)
-- [V5.3 — menu główne, nagłówki i ED](docs/menu-label-patch-v5-3-v1.md)
-- [V5.2 — wcześniejsze nazwy menu głównego](docs/menu-label-patch-v5-2-v1.md)
-
-Skrypty odtworzeniowe tej gałęzi:
-
-- `tools/apply_menu_labels_v53.py`
-- `tools/build_menu_labels_v531_physical_fix.py`
-- `tools/apply_theme_labels_v533.py`
-- `tools/apply_theme_labels_v534.py`
-- `tools/apply_ed_phone_fix_v53.py`
-
-Pliki VBF i paczki firmware nie są publikowane w repozytorium. Pracuj wyłącznie na własnych, zweryfikowanych plikach i zachowaj kopię recovery.
+- [V5.3 — pierwsza pełna gałąź napisów](docs/menu-label-patch-v5-3-v1.md)
+- [V5.2 — menu główne](docs/menu-label-patch-v5-2-v1.md)
